@@ -1,11 +1,12 @@
 import Header from '@/components/custom/Header'
-import { UserButton } from '@clerk/clerk-react'
+import { UserButton, useUser } from '@clerk/clerk-react'
 import { AtomIcon, Edit, Share2 } from 'lucide-react'
 import React from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
 
 function Home() {
 
+  const {user,isLoaded,isSignedIn} = useUser();
   const navigate = useNavigate()
 
   const handleGetStarted = () => {
@@ -13,7 +14,11 @@ function Home() {
   };
 
   const handleLogin = () => {
-    navigate('/auth/sign-in'); 
+    if(!isSignedIn&&isLoaded)
+      {
+        // return <Navigate to={'/auth/sign-in'} />
+        navigate('/auth/sign-in'); 
+      }
   };
 
   return (
