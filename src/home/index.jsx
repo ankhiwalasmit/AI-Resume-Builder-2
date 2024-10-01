@@ -9,7 +9,7 @@ function Home() {
   const navigate = useNavigate()
 
   const handleGetStarted = () => {
-    navigate('/dashboard');  // Navigate to the dashboard
+    navigate('/dashboard'); 
   };
 
   return (
