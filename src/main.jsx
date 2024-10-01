@@ -29,8 +29,8 @@ const router = createBrowserRouter([
         element: <EditResume />
       },
       {
-        path: 'dashboard/resume/:resumeId/edit',
-        element: <ResumePreview />
+        path: '/my-resume/:resumeId/view',
+        element: <ViewResume />
       }
     ]
   },
