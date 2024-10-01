@@ -12,6 +12,10 @@ function Home() {
     navigate('/dashboard'); 
   };
 
+  const handleLogin = () => {
+    navigate('/auth/sign-in'); 
+  };
+
   return (
     <div>
       <Header/>
@@ -125,12 +129,18 @@ function Home() {
     </div>
 
     <div className="mt-12 text-center">
-      <a
+      {/* <a
         href="/auth/sign-in"
         className="inline-block rounded bg-pink-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-pink-700 focus:outline-none focus:ring focus:ring-yellow-400"
       >
         Get Started Today
-      </a>
+      </a> */}
+      <button
+                onClick={handleLogin}
+                className="inline-block rounded bg-pink-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-pink-700 focus:outline-none focus:ring focus:ring-yellow-400"
+              >
+                Get Started Today
+            </button>
     </div>
     </section>
   </div>
