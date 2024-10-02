@@ -43,7 +43,7 @@ const router=createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <ClerkProvider publishableKey={PUBLISHABLE_KEY} backendApi={clerkBackendApi}>
+     <ClerkProvider publishableKey={PUBLISHABLE_KEY} frontendApi={clerkFrontendApi} backendApi={clerkBackendApi}>
       <RouterProvider router={router} />
     </ClerkProvider>
   </React.StrictMode>
