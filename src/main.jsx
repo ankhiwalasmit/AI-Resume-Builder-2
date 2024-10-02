@@ -12,6 +12,7 @@ import ViewResume from './my-resume/[resumeId]/view/index.jsx'
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 const clerkFrontendApi = import.meta.env.VITE_CLERK_FRONTEND_API;
+const clerkBackendApi = import.meta.env.VITE_CLERK_BACKEND_API;
 const router=createBrowserRouter([
   {
     path:'/',
@@ -42,7 +43,7 @@ const router=createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <ClerkProvider publishableKey={PUBLISHABLE_KEY} frontendApi={clerkFrontendApi}>
+     <ClerkProvider publishableKey={PUBLISHABLE_KEY} frontendApi={clerkFrontendApi} backendApi={clerkBackendApi}>
       <RouterProvider router={router} />
     </ClerkProvider>
   </React.StrictMode>
